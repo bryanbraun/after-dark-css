@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hard Rain | After Dark in CSS</title>
+  <link rel="shortcut icon" href="img/favicon.png" />
+  <link rel="stylesheet" href="base.css">
+  <style>
+    /* shared raindrop attributes */
+    .r {
+      position: absolute;
+      display: block;
+      border-radius: 50%;
+      border-style: solid;
+      border-width: 2px;
+    }
+    
+    /**
+     * Animation timing
+     * Each one has a slightly later delay
+     * We'll aim to use one per raindrop (total of 30)
+     */
+    .t1 {
+      -webkit-animation: drip 4.5s -4.35s ease-in-out infinite;
+      -moz-animation: drip 4.5s -4.35s ease-in-out infinite;
+      -o-animation: drip 4.5s -4.35s ease-in-out infinite;
+      animation: drip 4.5s -4.35s ease-in-out infinite;
+    }
+    .t2 {
+      -webkit-animation: drip 4.5s -4.2s ease-in-out infinite;
+      -moz-animation: drip 4.5s -4.2s ease-in-out infinite;
+      -o-animation: drip 4.5s -4.2s ease-in-out infinite;
+      animation: drip 4.5s -4.2s ease-in-out infinite;
+    }
+    .t3 {
+      -webkit-animation: drip 4.5s -4.05s ease-in-out infinite;
+      -moz-animation: drip 4.5s -4.05s ease-in-out infinite;
+      -o-animation: drip 4.5s -4.05s ease-in-out infinite;
+      animation: drip 4.5s -4.05s ease-in-out infinite;
+    }
+    .t4 {
+      -webkit-animation: drip 4.5s -3.9s ease-in-out infinite;
+      -moz-animation: drip 4.5s -3.9s ease-in-out infinite;
+      -o-animation: drip 4.5s -3.9s ease-in-out infinite;
+      animation: drip 4.5s -3.9s ease-in-out infinite;
+    }
+    .t5 {
+      -webkit-animation: drip 4.5s -3.75s ease-in-out infinite;
+      -moz-animation: drip 4.5s -3.75s ease-in-out infinite;
+      -o-animation: drip 4.5s -3.75s ease-in-out infinite;
+      animation: drip 4.5s -3.75s ease-in-out infinite;
+    }
+    .t6 {
+      -webkit-animation: drip 4.5s -3.6s ease-in-out infinite;
+      -moz-animation: drip 4.5s -3.6s ease-in-out infinite;
+      -o-animation: drip 4.5s -3.6s ease-in-out infinite;
+      animation: drip 4.5s -3.6s ease-in-out infinite;
+    }
+    .t7 {
+      -webkit-animation: drip 4.5s -3.45s ease-in-out infinite;
+      -moz-animation: drip 4.5s -3.45s ease-in-out infinite;
+      -o-animation: drip 4.5s -3.45s ease-in-out infinite;
+      animation: drip 4.5s -3.45s ease-in-out infinite;
+    }
+    .t8 {
+      -webkit-animation: drip 4.5s -3.3s ease-in-out infinite;
+      -moz-animation: drip 4.5s -3.3s ease-in-out infinite;
+      -o-animation: drip 4.5s -3.3s ease-in-out infinite;
+      animation: drip 4.5s -3.3s ease-in-out infinite;
+    }
+    .t9 {
+      -webkit-animation: drip 4.5s -3.15s ease-in-out infinite;
+      -moz-animation: drip 4.5s -3.15s ease-in-out infinite;
+      -o-animation: drip 4.5s -3.15s ease-in-out infinite;
+      animation: drip 4.5s -3.15s ease-in-out infinite;
+    }
+    .t10 {
+      -webkit-animation: drip 4.5s -3s ease-in-out infinite;
+      -moz-animation: drip 4.5s -3s ease-in-out infinite;
+      -o-animation: drip 4.5s -3s ease-in-out infinite;
+      animation: drip 4.5s -3s ease-in-out infinite;
+    }
+    .t11 {
+      -webkit-animation: drip 4.5s -2.85s ease-in-out infinite;
+      -moz-animation: drip 4.5s -2.85s ease-in-out infinite;
+      -o-animation: drip 4.5s -2.85s ease-in-out infinite;
+      animation: drip 4.5s -2.85s ease-in-out infinite;
+    }
+    .t12 {
+      -webkit-animation: drip 4.5s -2.7s ease-in-out infinite;
+      -moz-animation: drip 4.5s -2.7s ease-in-out infinite;
+      -o-animation: drip 4.5s -2.7s ease-in-out infinite;
+      animation: drip 4.5s -2.7s ease-in-out infinite;
+    }
+    .t13 {
+      -webkit-animation: drip 4.5s -2.55s ease-in-out infinite;
+      -moz-animation: drip 4.5s -2.55s ease-in-out infinite;
+      -o-animation: drip 4.5s -2.55s ease-in-out infinite;
+      animation: drip 4.5s -2.55s ease-in-out infinite;
+    }
+    .t14 {
+      -webkit-animation: drip 4.5s -2.4s ease-in-out infinite;
+      -moz-animation: drip 4.5s -2.4s ease-in-out infinite;
+      -o-animation: drip 4.5s -2.4s ease-in-out infinite;
+      animation: drip 4.5s -2.4s ease-in-out infinite;
+    }
+    .t15 {
+      -webkit-animation: drip 4.5s -2.25s ease-in-out infinite;
+      -moz-animation: drip 4.5s -2.25s ease-in-out infinite;
+      -o-animation: drip 4.5s -2.25s ease-in-out infinite;
+      animation: drip 4.5s -2.25s ease-in-out infinite;
+    }
+    .t16 {
+      -webkit-animation: drip 4.5s -2.1s ease-in-out infinite;
+      -moz-animation: drip 4.5s -2.1s ease-in-out infinite;
+      -o-animation: drip 4.5s -2.1s ease-in-out infinite;
+      animation: drip 4.5s -2.1s ease-in-out infinite;
+    }
+    .t17 {
+      -webkit-animation: drip 4.5s -1.95s ease-in-out infinite;
+      -moz-animation: drip 4.5s -1.95s ease-in-out infinite;
+      -o-animation: drip 4.5s -1.95s ease-in-out infinite;
+      animation: drip 4.5s -1.95s ease-in-out infinite;
+    }
+    .t18 {
+      -webkit-animation: drip 4.5s -1.8s ease-in-out infinite;
+      -moz-animation: drip 4.5s -1.8s ease-in-out infinite;
+      -o-animation: drip 4.5s -1.8s ease-in-out infinite;
+      animation: drip 4.5s -1.8s ease-in-out infinite;
+    }
+    .t19 {
+      -webkit-animation: drip 4.5s -1.65s ease-in-out infinite;
+      -moz-animation: drip 4.5s -1.65s ease-in-out infinite;
+      -o-animation: drip 4.5s -1.65s ease-in-out infinite;
+      animation: drip 4.5s -1.65s ease-in-out infinite;
+    }
+    .t20 {
+      -webkit-animation: drip 4.5s -1.5s ease-in-out infinite;
+      -moz-animation: drip 4.5s -1.5s ease-in-out infinite;
+      -o-animation: drip 4.5s -1.5s ease-in-out infinite;
+      animation: drip 4.5s -1.5s ease-in-out infinite;
+    }
+    .t21 {
+      -webkit-animation: drip 4.5s -1.35s ease-in-out infinite;
+      -moz-animation: drip 4.5s -1.35s ease-in-out infinite;
+      -o-animation: drip 4.5s -1.35s ease-in-out infinite;
+      animation: drip 4.5s -1.35s ease-in-out infinite;
+    }
+    .t22 {
+      -webkit-animation: drip 4.5s -1.2s ease-in-out infinite;
+      -moz-animation: drip 4.5s -1.2s ease-in-out infinite;
+      -o-animation: drip 4.5s -1.2s ease-in-out infinite;
+      animation: drip 4.5s -1.2s ease-in-out infinite;
+    }
+    .t23 {
+      -webkit-animation: drip 4.5s -1.05s ease-in-out infinite;
+      -moz-animation: drip 4.5s -1.05s ease-in-out infinite;
+      -o-animation: drip 4.5s -1.05s ease-in-out infinite;
+      animation: drip 4.5s -1.05s ease-in-out infinite;
+    }
+    .t24 {
+      -webkit-animation: drip 4.5s -0.9s ease-in-out infinite;
+      -moz-animation: drip 4.5s -0.9s ease-in-out infinite;
+      -o-animation: drip 4.5s -0.9s ease-in-out infinite;
+      animation: drip 4.5s -0.9s ease-in-out infinite;
+    }
+    .t25 {
+      -webkit-animation: drip 4.5s -0.75s ease-in-out infinite;
+      -moz-animation: drip 4.5s -0.75s ease-in-out infinite;
+      -o-animation: drip 4.5s -0.75s ease-in-out infinite;
+      animation: drip 4.5s -0.75s ease-in-out infinite;
+    }
+    .t26 {
+      -webkit-animation: drip 4.5s -0.6s ease-in-out infinite;
+      -moz-animation: drip 4.5s -0.6s ease-in-out infinite;
+      -o-animation: drip 4.5s -0.6s ease-in-out infinite;
+      animation: drip 4.5s -0.6s ease-in-out infinite;
+    }
+    .t27 {
+      -webkit-animation: drip 4.5s -0.45s ease-in-out infinite;
+      -moz-animation: drip 4.5s -0.45s ease-in-out infinite;
+      -o-animation: drip 4.5s -0.45s ease-in-out infinite;
+      animation: drip 4.5s -0.45s ease-in-out infinite;
+    }
+    .t28 {
+      -webkit-animation: drip 4.5s -0.3s ease-in-out infinite;
+      -moz-animation: drip 4.5s 0.3s ease-in-out infinite;
+      -o-animation: drip 4.5s 0.3s ease-in-out infinite;
+      animation: drip 4.5s 0.3s ease-in-out infinite;
+    }
+    .t29 {
+      -webkit-animation: drip 4.5s -0.15s ease-in-out infinite;
+      -moz-animation: drip 4.5s -0.15s ease-in-out infinite;
+      -o-animation: drip 4.5s -0.15s ease-in-out infinite;
+      animation: drip 4.5s -0.15s ease-in-out infinite;
+    }
+    .t30 {
+      -webkit-animation: drip 4.5s ease-in-out infinite;
+      -moz-animation: drip 4.5s ease-in-out infinite;
+      -o-animation: drip 4.5s ease-in-out infinite;
+      animation: drip 4.5s ease-in-out infinite;
+    }                        
+    
+    /* positions */
+    /* row 1 */
+    .p0-1 { top: -2%; left: 5%; }
+    .p0-2 { top: -17%; left: 25%; }
+    .p0-3 { top: 4%; left: 45%; }
+    .p0-4 { top: -4%; left: 65%; }    
+    .p0-5 { top: 1%; left: 85%; }
+    
+    /* row 2 */
+    .p1-1 { top: 18%; left: 5%; }
+    .p1-2 { top: 7%; left: 25%; }
+    .p1-3 { top: 24%; left: 45%; }
+    .p1-4 { top: 16%; left: 65%; }    
+    .p1-5 { top: 21%; left: 85%; }
+       
+    /* row 3 */
+    .p2-1 { top: 38%; left: 15%; }
+    .p2-2 { top: 27%; left: 35%; }
+    .p2-3 { top: 44%; left: 55%; }
+    .p2-4 { top: 36%; left: 75%; }
+    .p2-5 { top: 41%; left: 95%; }
+    
+    /* row 4 */
+    .p3-1 { top: 58%; left: 5%; }
+    .p3-2 { top: 47%; left: 25%; }
+    .p3-3 { top: 64%; left: 45%; }
+    .p3-4 { top: 56%; left: 65%; }    
+    .p3-5 { top: 61%; left: 85%; }
+    
+    /* row 5 */
+    .p4-1 { top: 78%; left: 15%; }
+    .p4-2 { top: 67%; left: 35%; }
+    .p4-3 { top: 84%; left: 55%; }
+    .p4-4 { top: 76%; left: 75%; }
+    .p4-5 { top: 81%; left: 95%; }
+    
+    /* row 6 */
+    .p5-1 { top: 98%; left: 15%; }
+    .p5-2 { top: 87%; left: 35%; }
+    .p5-3 { top: 104%; left: 55%; }
+    .p5-4 { top: 96%; left: 75%; }
+    .p5-5 { top: 101%; left: 95%; }
+        
+    /* sizes (smallest to largest) */
+    .s140 {
+      /**
+       * Margins are required for a drop to remain centered
+       * as it grows. The margin is half the drop diameter.
+       */
+      margin: -70px 0 0 -70px;
+      width: 140px;
+      height: 140px;      
+    }
+    .s200 {
+      margin: -100px 0 0 -100px;
+      width: 200px;
+      height: 200px;      
+    }
+    .s250 {
+      margin: -125px 0 0 -125px;
+      width: 250px;
+      height: 250px;      
+    }
+    .s300 {
+      margin: -150px 0 0 -150px;
+      width: 300px;
+      height: 300px;      
+    }
+    .s350 {
+      margin: -175px 0 0 -175px;
+      width: 350px;
+      height: 350px;      
+    }
+    
+    /* colors (pulled from screenshots) */
+    .dkblue { border-color: #00006e; }
+    .lime { border-color: #c8d354; }
+    .ltgray { border-color: #c2c2c2; }
+    .red { border-color: #861f23; }
+    .ltblue { border-color: #45a0cc; }
+    .pink { border-color: #9a3368; }
+    .yellow { border-color: #efda1d; }
+    .green { border-color: #397132; }
+    
+    /**
+     * Keyframes
+     * They are kind of wordy, but that allows them to be used
+     * for drops of any size, position, and color. Cool!
+     */
+    @-webkit-keyframes drip {
+      0% {
+        border: none;
+        width: 0;
+        height: 0;
+        margin: 0;
+      }
+      89% {
+        border: 2px solid #111;
+      }
+      90% {
+        width: 0;
+        height: 0;
+        margin: 0;
+      }
+      100% {
+        display: none;
+      }
+    }
+    @-moz-keyframes drip {
+      0% {
+        border: none;
+        width: 0;
+        height: 0;
+        margin: 0;
+      }
+      89% {
+        border: 2px solid #111;
+      }
+      90% {
+        width: 0;
+        height: 0;
+        margin: 0;
+      }
+      100% {
+        display: none;
+      }
+    }
+    @-o-keyframes drip {
+      0% {
+        border: none;
+        width: 0;
+        height: 0;
+        margin: 0;
+      }
+      89% {
+        border: 2px solid #111;
+      }
+      90% {
+        width: 0;
+        height: 0;
+        margin: 0;
+      }
+      100% {
+        display: none;
+      }
+    }
+    @keyframes drip {
+      0% {
+        border: none;
+        width: 0;
+        height: 0;
+        margin: 0;
+      }
+      89% {
+        border: 2px solid #111;
+      }
+      90% {
+        width: 0;
+        height: 0;
+        margin: 0;
+      }
+      100% {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="visuallyhidden">Hard Rain Screensaver - After Dark in CSS</h1>
+  <!-- row 1 -->
+  <div class="r t7 p0-1 s200 dkblue"></div>
+  <div class="r t23 p0-2 s350 lime"></div>
+  <div class="r t17 p0-3 s140 ltgray"></div>
+  <div class="r t11 p0-4 s300 red"></div>
+  <div class="r t14 p0-5 s250 ltblue"></div>
+  
+  <!-- row 2 -->
+  <div class="r t29 p1-1 s350 pink"></div>
+  <div class="r t18 p1-2 s300 yellow"></div>
+  <div class="r t30 p1-3 s140 green"></div>
+  <div class="r t12 p1-4 s200 ltgray"></div>
+  <div class="r t27 p1-5 s250 dkblue"></div>
+  
+  <!-- row 3 -->
+  <div class="r t10 p2-1 s140 pink"></div>
+  <div class="r t4 p2-2 s200 red"></div>
+  <div class="r t8 p2-3 s300 ltblue"></div>
+  <div class="r t22 p2-4 s350 yellow"></div>
+  <div class="r t1 p2-5 s250 lime"></div>
+  
+  <!-- row 4 -->
+  <div class="r t3 p3-1 s300 green"></div>
+  <div class="r t6 p3-2 s250 dkblue"></div>
+  <div class="r t15 p3-3 s350 ltgray"></div>
+  <div class="r t24 p3-4 s140 pink"></div>
+  <div class="r t21 p3-5 s200 ltblue"></div>
+  
+  <!-- row 5 -->
+  <div class="r t13 p4-1 s250 yellow"></div>
+  <div class="r t28 p4-2 s140 red"></div>
+  <div class="r t2 p4-3 s200 ltgray"></div>
+  <div class="r t19 p4-4 s300 green"></div>
+  <div class="r t25 p4-5 s350 lime"></div>
+  
+  <!-- row 6 -->
+  <div class="r t5 p5-1 s350 dkblue"></div>
+  <div class="r t26 p5-2 s300 pink"></div>
+  <div class="r t20 p5-3 s140 ltblue"></div>
+  <div class="r t16 p5-4 s250 yellow"></div>
+  <div class="r t9 p5-5 s200 ltgray"></div>
+  
+  <!-- batch 2 (out of sequence) -->
+  <!-- row 1 -->
+  <div class="r t22 p0-1 s200 dkblue"></div>
+  <div class="r t8 p0-2 s350 lime"></div>
+  <div class="r t2 p0-3 s140 ltgray"></div>
+  <div class="r t26 p0-4 s300 red"></div>
+  <div class="r t29 p0-5 s250 ltblue"></div>
+  
+  <!-- row 2 -->
+  <div class="r t14 p1-1 s350 pink"></div>
+  <div class="r t3 p1-2 s300 yellow"></div>
+  <div class="r t15 p1-3 s140 green"></div>
+  <div class="r t27 p1-4 s200 ltgray"></div>
+  <div class="r t12 p1-5 s250 dkblue"></div>
+  
+  <!-- row 3 -->
+  <div class="r t25 p2-1 s140 pink"></div>
+  <div class="r t19 p2-2 s200 red"></div>
+  <div class="r t23 p2-3 s300 ltblue"></div>
+  <div class="r t7 p2-4 s350 yellow"></div>
+  <div class="r t16 p2-5 s250 lime"></div>
+  
+  <!-- row 4 -->
+  <div class="r t18 p3-1 s300 green"></div>
+  <div class="r t21 p3-2 s250 dkblue"></div>
+  <div class="r t30 p3-3 s350 ltgray"></div>
+  <div class="r t9 p3-4 s140 pink"></div>
+  <div class="r t6 p3-5 s200 ltblue"></div>
+  
+  <!-- row 5 -->
+  <div class="r t28 p4-1 s250 yellow"></div>
+  <div class="r t13 p4-2 s140 red"></div>
+  <div class="r t17 p4-3 s200 ltgray"></div>
+  <div class="r t4 p4-4 s300 green"></div>
+  <div class="r t10 p4-5 s350 lime"></div>
+  
+  <!-- row 6 -->
+  <div class="r t20 p5-1 s350 dkblue"></div>
+  <div class="r t11 p5-2 s300 pink"></div>
+  <div class="r t5 p5-3 s140 ltblue"></div>
+  <div class="r t1 p5-4 s250 yellow"></div>
+  <div class="r t24 p5-5 s200 ltgray"></div>
+</body>
+</html>

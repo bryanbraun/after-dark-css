@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fish | After Dark in CSS</title>
+  <link rel="shortcut icon" href="img/favicon.png" />
+  <link rel="stylesheet" href="base.css">
+  <style>
+  
+    body {
+      background-color: black;
+      background-image: url(img/seafloor.jpg);
+      background-position: bottom;
+      background-repeat: repeat-x;
+    }
+    
+    .bubbles {
+      position: absolute;
+      bottom: -60px;
+      display: block;
+      width: 50px;
+      height: 56px;
+      background-repeat: no-repeat;
+      background-image: url(img/bubbles_50.png);
+      -webkit-animation: rise 13s linear infinite, reappear 39s steps(3) infinite, bubble-alt 0.2s steps(2) infinite;
+      -moz-animation: rise 13s linear infinite, reappear 39s steps(3) infinite, bubble-alt 0.2s steps(2) infinite;
+      -o-animation: rise 13s linear infinite, reappear 39s steps(3) linear infinite, bubble-alt 0.2s steps(2) infinite;
+      animation: rise 13s linear infinite, reappear 39s steps(3) linear infinite, bubble-alt 0.2s steps(2) infinite;
+    }
+    
+    /**
+     * Fish
+     */
+    .fish {
+      position: absolute;
+      width: 145px;
+      height: 145px;
+      /* off-canvas starting position */
+      left: -50%;
+      top: -50%;
+    }
+    .butterfly {
+      background-image: url(img/fish-butterfly.png);
+    }
+    .guppy {
+      background-image: url(img/fish-guppy.png);
+    }
+    .seahorse {
+      background-image: url(img/fish-seahorse.png);
+    }
+    .jelly {
+      background-image: url(img/fish-jelly.png);
+    }
+    .minnow {
+      background-image: url(img/fish-minnow.png);
+    }
+    .red {
+      background-image: url(img/fish-red.png);
+    }
+    .striped {
+      background-image: url(img/fish-striped.png);
+    }
+    .angel {
+      background-image: url(img/fish-angel.png);
+    }
+    .flounder {
+      background-image: url(img/fish-flounder.png);
+    }
+    
+    /**
+     * Routes
+     * Defines speeds, delays, and direction for a fish to go.
+     */
+     .ltr {
+       /* Left to right & turn around */
+      -webkit-animation: ltr 26s linear infinite, toggle 0.2s steps(2) infinite;
+      -moz-animation: ltr 26s linear infinite, toggle 0.2s steps(2) infinite;
+      -o-animation: ltr 26s linear infinite, toggle 0.2s steps(2) infinite;
+      animation: ltr 26s linear infinite, toggle 0.2s steps(2) infinite;
+     }
+    .ltr-delay1 {
+       /* Left to right & turn around */
+      -webkit-animation: ltr 26s 4s linear infinite, toggle 0.2s steps(2) infinite;
+      -moz-animation: ltr 26s 4s linear infinite, toggle 0.2s steps(2) infinite;
+      -o-animation: ltr 26s 4s linear infinite, toggle 0.2s steps(2) infinite;
+      animation: ltr 26s 4s linear infinite, toggle 0.2s steps(2) infinite;
+    }
+    .ltr-delay2 {
+       /* Left to right & turn around */
+      -webkit-animation: ltr 26s 8s linear infinite, toggle 0.2s steps(2) infinite;
+      -moz-animation: ltr 26s 8s linear infinite, toggle 0.2s steps(2) infinite;
+      -o-animation: ltr 26s 8s linear infinite, toggle 0.2s steps(2) infinite;
+      animation: ltr 26s 8s linear infinite, toggle 0.2s steps(2) infinite;
+    }
+    .ltr-fast {
+       /* Left to right & turn around */
+      -webkit-animation: ltr 17s linear infinite, toggle 0.2s steps(2) infinite;
+      -moz-animation: ltr 17s linear infinite, toggle 0.2s steps(2) infinite;
+      -o-animation: ltr 17s linear infinite, toggle 0.2s steps(2) infinite;
+      animation: ltr 17s linear infinite, toggle 0.2s steps(2) infinite;
+    }
+    .rtl {
+       /* Right to left & turn around */
+      -webkit-animation: rtl 26s linear infinite, toggle 0.2s steps(2) infinite;
+      -moz-animation: rtl 26s linear infinite, toggle 0.2s steps(2) infinite;
+      -o-animation: rtl 26s linear infinite, toggle 0.2s steps(2) infinite;
+      animation: rtl 26s linear infinite, toggle 0.2s steps(2) infinite;
+    }
+    .rtl-delay1 {
+       /* Right to left & turn around */
+      -webkit-animation: rtl 26s 3s linear infinite, toggle 0.2s steps(2) infinite;
+      -moz-animation: rtl 26s 3s linear infinite, toggle 0.2s steps(2) infinite;
+      -o-animation: rtl 26s 3s linear infinite, toggle 0.2s steps(2) infinite;
+      animation: rtl 26s 4s linear infinite, toggle 0.2s steps(2) infinite;
+    }
+    .rtl-delay2 {
+       /* Right to left & turn around */
+      -webkit-animation: rtl 26s 7s linear infinite, toggle 0.2s steps(2) infinite;
+      -moz-animation: rtl 26s 7s linear infinite, toggle 0.2s steps(2) infinite;
+      -o-animation: rtl 26s 7s linear infinite, toggle 0.2s steps(2) infinite;
+      animation: rtl 26s 7s linear infinite, toggle 0.2s steps(2) infinite;
+    }
+    .rtl-fast {
+       /* Right to left & turn around */
+      -webkit-animation: rtl 17s linear infinite, toggle 0.2s steps(2) infinite;
+      -moz-animation: rtl 17s linear infinite, toggle 0.2s steps(2) infinite;
+      -o-animation: rtl 17s linear infinite, toggle 0.2s steps(2) infinite;
+      animation: rtl 17s linear infinite, toggle 0.2s steps(2) infinite;
+    }
+    
+    /**
+     * Positions
+     */
+    .row1 { top: 0%; }     
+    .row2 { top: 9% }
+    .row3 { top: 18%; }
+    .row4 { top: 27%; }
+    .row5 { top: 36%; }
+    .row6 { top: 45%; }
+    .row7 { top: 54%; }
+    .row8 { top: 63%; }
+    .row9 { top: 72%; }
+        
+    /**
+     * Keyframes
+     */
+    /* LTR - Moves fish from left to right and back again */
+    @-webkit-keyframes ltr {
+      0% { left: -30%; }
+      50% { left: 110%; }
+      51% {
+        -webkit-transform: rotateY(0);
+        -moz-transform: rotateY(0);
+        -ms-transform: rotateY(0);
+        -o-transform: rotateY(0);
+        transform: rotateY(0);
+      }
+      52% {
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+      }
+      100% {
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+        left: -30%;
+      }
+    }
+    @-moz-keyframes ltr {
+      0% { left: -30%; }
+      50% { left: 110%; }
+      51% {
+        -webkit-transform: rotateY(0);
+        -moz-transform: rotateY(0);
+        -ms-transform: rotateY(0);
+        -o-transform: rotateY(0);
+        transform: rotateY(0);
+      }
+      52% {
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+      }
+      100% {
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+        left: -30%;
+      }
+    }
+    @-o-keyframes ltr {
+      0% { left: -30%; }
+      50% { left: 110%; }
+      51% {
+        -webkit-transform: rotateY(0);
+        -moz-transform: rotateY(0);
+        -ms-transform: rotateY(0);
+        -o-transform: rotateY(0);
+        transform: rotateY(0);
+      }
+      52% {
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+      }
+      100% {
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+        left: -30%;
+      }
+    }
+    @keyframes ltr {
+      0% { left: -30%; }
+      50% { left: 110%; }
+      51% {
+        -webkit-transform: rotateY(0);
+        -moz-transform: rotateY(0);
+        -ms-transform: rotateY(0);
+        -o-transform: rotateY(0);
+        transform: rotateY(0);
+      }
+      52% {
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+      }
+      100% {
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+        left: -30%;
+      }
+    }
+    
+    /* RTL - Moves fish from right to left, and back again */ 
+    @-webkit-keyframes rtl {
+      0% {
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+        left: 110%;
+      }
+      50% { left: -30%; }
+      51% {
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+      }
+      52% { -webkit-transform: rotateY(0deg); }
+      100% { left: 110%; }
+    }
+    @-moz-keyframes rtl {
+      0% {
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+        left: 110%;
+      }
+      50% { left: -30%; }
+      51% {
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+      }
+      52% { -webkit-transform: rotateY(0deg); }
+      100% { left: 110%; }
+    }
+    @-o-keyframes rtl {
+      0% {
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+        left: 110%;
+      }
+      50% { left: -30%; }
+      51% {
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+      }
+      52% { -webkit-transform: rotateY(0deg); }
+      100% { left: 110%; }
+    }
+    @keyframes rtl {
+      0% {
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+        left: 110%;
+      }
+      50% { left: -30%; }
+      51% {
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+      }
+      52% { -webkit-transform: rotateY(0deg); }
+      100% { left: 110%; }
+    }
+    
+    /* bubble keyframes */
+    /* rise */
+    @-webkit-keyframes rise {
+      from { 
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0);
+      }
+      to {
+        -webkit-transform: translate(0, -1800px);
+        -moz-transform: translate(0, -1800px);
+        -o-transform: translate(0, -1800px);
+        -ms-transform: translate(0, -1800px);
+        transform: translate(0, -1800px);
+      }
+    }
+    @-moz-keyframes rise {
+      from { 
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0);
+      }
+      to {
+        -webkit-transform: translate(0, -1800px);
+        -moz-transform: translate(0, -1800px);
+        -o-transform: translate(0, -1800px);
+        -ms-transform: translate(0, -1800px);
+        transform: translate(0, -1800px);
+       }
+    }
+    @-o-keyframes rise {
+      from { 
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0);
+      }
+      to {
+        -webkit-transform: translate(0, -1800px);
+        -moz-transform: translate(0, -1800px);
+        -o-transform: translate(0, -1800px);
+        -ms-transform: translate(0, -1800px);
+        transform: translate(0, -1800px);
+      }
+    }
+    @keyframes rise {
+      from { 
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0);
+      }
+      to {
+        -webkit-transform: translate(0, -1800px);
+        -moz-transform: translate(0, -1800px);
+        -o-transform: translate(0, -1800px);
+        -ms-transform: translate(0, -1800px);
+        transform: translate(0, -1800px);
+      }
+    }
+    /* Bubbles reappear */
+    @-webkit-keyframes reappear {
+      from { left: 20%; }
+      to   { left: 80%; }
+    }
+    @-moz-keyframes reappear {
+      from { left: 20%; }
+      to   { left: 80%; }
+    }
+    @-o-keyframes reappear {
+      from { left: 20%; }
+      to   { left: 80%; }
+    }
+    @keyframes reappear {
+      from { left: 20%; }
+      to   { left: 80%; }
+    }
+    
+    /* Bubble-alt - alternating the bubble images */
+    @-webkit-keyframes bubble-alt {
+      from { background-position: 0; }
+      to   { background-position: -100px; }
+    }
+    @-moz-keyframes bubble-alt {
+      from { background-position: 0; }
+      to   { background-position: -100px; }
+    }
+    @-o-keyframes bubble-alt {
+      from { background-position: 0; }
+      to   { background-position: -100px; }
+    }
+    @keyframes bubble-alt {
+      from { background-position: 0; }
+      to   { background-position: -100px; }
+    }
+    /* Toggle - for toggling any two fish images in the sprite */
+    @-webkit-keyframes toggle {
+      from { background-position: 0; }
+      to   { background-position: -290px; }
+    }
+    @-moz-keyframes toggle {
+      from { background-position: 0; }
+      to   { background-position: -290px; }
+    }
+    @-o-keyframes toggle {
+      from { background-position: 0; }
+      to   { background-position: -290px; }
+    }
+    @keyframes toggle {
+      from { background-position: 0; }
+      to   { background-position: -290px; }
+    }
+    
+  </style>
+</head>
+<body>
+  <h1 class="visuallyhidden">Fish Screensaver - After Dark in CSS</h1>
+  <b class="bubbles"></b>
+  <div class="butterfly fish row1 ltr"></div>
+  <div class="jelly fish row1 rtl-fast"></div>
+  <div class="guppy fish row2 rtl"></div>
+  <div class="angel fish row2 rtl-delay1"></div>
+  <div class="seahorse fish row3 rtl-delay-2"></div>
+  <div class="red fish row4 rtl-delay2"></div>
+  <div class="jelly fish row4 ltr"></div>
+  <div class="minnow fish row5 rtl"></div>
+  <div class="seahorse fish row5 ltr-fast"></div>  
+  <div class="angel fish row6 rtl-fast"></div>
+  <div class="striped fish row7 ltr"></div>
+  <div class="guppy fish row7 ltr-delay1"></div>
+  <div class="angel fish row8 ltr-delay2"></div>
+  <div class="minnow fish row8 rtl-delay2"></div>
+  <div class="flounder fish row9 rtl"></div>
+  <div class="red fish row9 ltr-delay1"></div>
+</body>
+</html

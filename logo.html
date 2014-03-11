@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Logo | After Dark in CSS</title>
+  <link rel="shortcut icon" href="img/favicon.png" />
+  <link rel="stylesheet" href="base.css" />
+  <style>
+  
+  body {
+    background: #000;
+  }
+  
+  /* ball styling */
+  img {
+    /* 145px x 54px */
+    display: block;
+    position: absolute;
+    /* ball animation */
+    -webkit-animation: moveX 5s linear 0s infinite alternate, moveY 6.3s linear 0s infinite alternate;
+    -moz-animation: moveX 5s linear 0s infinite alternate, moveY 6.3s linear 0s infinite alternate;
+    -o-animation: moveX 5s linear 0s infinite alternate, moveY 6.3s linear 0s infinite alternate;
+    animation: moveX 5s linear 0s infinite alternate, moveY 6.3s linear 0s infinite alternate ;
+  }
+  
+  /* animation keyframes */
+  @-webkit-keyframes moveX {
+    /* screen width - width of image */
+    from { left: 0; } to { left: calc(100% - 145px); }
+  }
+  @-moz-keyframes moveX {
+    from { left: 0; } to { left: calc(100% - 145px); }
+  }
+  @-o-keyframes moveX {
+    from { left: 0; } to { left: calc(100% - 145px); }
+  }
+  @keyframes moveX {
+    from { left: 0; } to { left: calc(100% - 145px); }
+  }
+  @-webkit-keyframes moveY {
+    /* screen height - height of image */
+    from { top: calc(100% - 54px); } to { top: 0; }
+  }
+  @-moz-keyframes moveY {
+    from { top: calc(100% - 54px); } to { top: 0; }
+  }
+  @-o-keyframes moveY {
+    from { top: calc(100% - 54px); } to { top: 0; }
+  }
+  @keyframes moveY {
+    from { top: calc(100% - 54px); } to { top: 0; }
+  }
+  </style>
+</head>
+<body>
+  <h1 class="visuallyhidden">Logo Screensaver - After Dark in CSS</h1>
+  <img src="img/logo.png">
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Globe | After Dark in CSS</title>
+  <link rel="shortcut icon" href="img/favicon.png" />
+  <link rel="stylesheet" href="base.css" />
+  <style>
+  
+    body {
+      background-color: black;
+    }
+
+    /* ball styling */
+    b {
+      display: block;
+      width: 240px;
+      height: 240px;
+      position: absolute;
+      background-color: black;
+      background-image: url(img/globe_240.jpg);
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      /* globe animation */
+      -webkit-animation: moveX 3s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate, spin 1.4s steps(21) infinite;
+      -moz-animation: moveX 3s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate, spin 1.4s steps(21) infinite;
+      -o-animation: moveX 3s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate, spin 1.4s steps(21) infinite;
+      animation: moveX 3s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate, spin 1.4s steps(21) infinite;
+    }
+
+    /* animation keyframes */
+    @-webkit-keyframes moveX {
+      /* screen width - width of ball */
+      from { left: calc(100% - 240px); } to { left: 0; }
+    }
+    @-moz-keyframes moveX {
+      from { left: calc(100% - 240px); } to { left: 0; }
+    }
+    @-o-keyframes moveX {
+      from { left: calc(100% - 240px); } to { left: 0; }
+    }
+    @keyframes moveX {
+      from { left: calc(100% - 240px); } to { left: 0; }
+    }
+    @-webkit-keyframes moveY {
+      from { top: calc(100% - 240px); } to { top: 0; }
+    }
+    @-moz-keyframes moveY {
+      from { top: calc(100% - 240px); } to { top: 0; }
+    }
+    @-o-keyframes moveY {
+      from { top: calc(100% - 240px); } to { top: 0; }
+    }
+    @keyframes moveY {
+      from { top: calc(100% - 240px); } to { top: 0; }
+    }
+  
+    /* Spinning animation */
+    @-webkit-keyframes spin {
+     from { background-position: -5040px; }
+       to { background-position: 0px; }
+    }
+    @-moz-keyframes spin {
+     from { background-position: -5040px; }
+       to { background-position: 0px; }
+    }
+    @-ms-keyframes spin {
+     from { background-position: -5040px; }
+       to { background-position: 0px; }
+    }
+    @-o-keyframes spin {
+     from { background-position: -5040px; }
+       to { background-position: 0px; }
+    }
+    @keyframes spin {
+     from { background-position: -5040px; }
+       to { background-position: 0px; }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="visuallyhidden">Globe Screensaver - After Dark in CSS</h1>
+  <b></b>
+</body>
+</html>

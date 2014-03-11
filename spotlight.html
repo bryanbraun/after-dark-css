@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spotlight | After Dark in CSS</title>
+  <link rel="shortcut icon" href="img/favicon.png" />
+  <link rel="stylesheet" href="base.css">
+  <style>
+    /**
+     * I really tried to get this one to work with CSS Masking (a la
+     * http://www.html5rocks.com/en/tutorials/masking/adobe/) but I
+     * was defeated. If you can figure out a way to do it, then let
+     * me know!
+     */
+    body {
+      background: url(img/macos-desktop.png) no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    
+    /* ball styling */
+    .spotlight {
+      position: absolute;
+      /* ball animation */
+      -webkit-animation: moveX 5s linear 0s infinite alternate, moveY 5.6s linear 0s infinite alternate;
+      -moz-animation: moveX 5s linear 0s infinite alternate, moveY 5.6s linear 0s infinite alternate;
+      -o-animation: moveX 5s linear 0s infinite alternate, moveY 5.6s linear 0s infinite alternate;
+      animation: moveX 5s linear 0s infinite alternate, moveY 5.6s linear 0s infinite alternate ;
+    }
+
+    /* animation keyframes */
+    @-webkit-keyframes moveX {
+      /* screen width - width of ball */
+      from { left: -2370px; } to { left: calc(100% - 2630px); }
+    }
+    @-moz-keyframes moveX {
+      from { left: -2370px; } to { left: calc(100% - 2630px); }
+    }
+    @-o-keyframes moveX {
+      from { left: -2370px; } to { left: calc(100% - 2630px); }
+    }
+    @keyframes moveX {
+      from { left: -2370px; } to { left: calc(100% - 2630px); }
+    }
+    @-webkit-keyframes moveY {
+      from { top: -1570px; } to { top: calc(100% - 1830px); }
+    }
+    @-moz-keyframes moveY {
+      from { top: -1570px; } to { top: calc(100% - 1830px); }
+    }
+    @-o-keyframes moveY {
+      from { top: -1570px; } to { top: calc(100% - 1830px); }
+    }
+    @keyframes moveY {
+      from { top: -1570px; } to { top: calc(100% - 1830px); }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="visuallyhidden">Spotlight Screensaver - After Dark in CSS</h1>
+  <!-- <b id="spotlight"></b> -->
+  <img class="spotlight" src="img/spotlight_bg.png" />
+</body>
+</html>

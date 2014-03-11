@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Messages | After Dark in CSS</title>
+  <link rel="shortcut icon" href="img/favicon.png" />
+  <link rel="stylesheet" href="base.css">
+  <style>
+  /**
+   * Thanks to @jonathonsampson for his demo at
+   * http://jsfiddle.net/jonathansampson/XxUXD/
+   */
+  .message {
+    white-space: nowrap;
+    -webkit-animation: marquee 10s linear infinite, move 30s steps(3) infinite;
+    -moz-animation: marquee 10s linear infinite, move 30s steps(3) infinite;
+    -o-animation: marquee 10s linear infinite, move 30s steps(3) infinite;
+    animation: marquee 10s linear infinite, move 30s steps(3) infinite;
+    /* stylisitic */
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    
+  }
+  
+  /* Marquee Animation */
+  @-webkit-keyframes marquee {
+    0%   { text-indent: 100%; }
+    100% { text-indent: -150px; }
+  }
+  @-moz-keyframes marquee {
+    0%   { text-indent: 100%; }
+    100% { text-indent: -150px; }
+  } 
+  @-o-keyframes marquee {
+    0%   { text-indent: 100%; }
+    100% { text-indent: -150px; }
+  }
+  @keyframes marquee {
+    0%   { text-indent: 100%; }
+    100% { text-indent: -150px; }
+  }
+  
+  /* Vertical Movement Animation */
+  @-webkit-keyframes move {
+    from { top: 20%; }
+    to   { top: 100%; }
+  }
+  @-moz-keyframes move {
+    from { top: 20%; }
+    to   { top: 100%; }
+  }
+  @-o-keyframes move {
+    from { top: 20%; }
+    to   { top: 100%; }
+  }
+  @keyframes move {
+    from { top: 20%; }
+    to   { top: 100%; }
+  }
+  
+  </style>
+</head>
+<body>
+    <h1 class="visuallyhidden">Messages Screensaver - After Dark in CSS</h1>
+  <h2 class="message">OUT TO LUNCH</h2>
+</body>
+</html>
