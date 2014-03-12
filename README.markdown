@@ -8,6 +8,10 @@ If so, then never fear --- CSS is here! Using modern CSS techniques like animati
 
 ### [See them here!](http://bryanbraun.github.io/after-dark-css/)
 
+#### Browsers
+
+These animations will only work in modern browsers. They have been tested in Chrome, Safari, & Firefox.
+
 #### Why?
 
 Just for fun. 

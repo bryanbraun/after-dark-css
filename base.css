@@ -18,6 +18,7 @@ body {
   margin: 0;
   height: 100%;
   font-family: 'ChicagoFLF', 'Times New Roman', 'Georgia', serif;
+  overflow: hidden;
 }
 
 /* Hide only visually, but have it available for screenreaders & for SEO purposes. See h5bp.com/v */
