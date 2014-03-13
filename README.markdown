@@ -1,10 +1,12 @@
 # After Dark in CSS
 
-![After Dark Icon](img/after-dark-icon.png)
+![Flying Toasters in CSS](img/flying-toasters-css.jpg)
 
 Do you longingly reminisce about the days when flying toasters graced your screen? Do words like "Confetti Factory" and "Daredevil Dan" make your heart skip a beat?
 
 If so, then never fear --- CSS is here! Using modern CSS techniques like animations and transforms, we can imitate several of your favorite After Dark™ screensavers.
+
+The animations were made with CSS alone. No animated gifs or javascript.
 
 ### [See them here!](http://bryanbraun.github.io/after-dark-css/)
 
