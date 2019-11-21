@@ -17,6 +17,7 @@ body {
   background-color: #111;
   margin: 0;
   height: 100%;
+  width: 100%;
   font-family: 'ChicagoFLF', 'Times New Roman', 'Georgia', serif;
   overflow: hidden;
 }

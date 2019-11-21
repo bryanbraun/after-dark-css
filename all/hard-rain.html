@@ -3,9 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>Hard Rain | After Dark in CSS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="../img/favicon.png" />
   <link rel="stylesheet" href="base.css">
   <style>
+    body {
+      position: relative;
+    }
+
     /* shared raindrop attributes */
     .r {
       position: absolute;
@@ -14,7 +19,7 @@
       border-style: solid;
       border-width: 2px;
     }
-    
+
     /**
      * Animation timing
      * Each one has a slightly later delay
@@ -199,51 +204,51 @@
       -moz-animation: drip 4.5s ease-in-out infinite;
       -o-animation: drip 4.5s ease-in-out infinite;
       animation: drip 4.5s ease-in-out infinite;
-    }                        
-    
+    }
+
     /* positions */
     /* row 1 */
     .p0-1 { top: -2%; left: 5%; }
     .p0-2 { top: -17%; left: 25%; }
     .p0-3 { top: 4%; left: 45%; }
-    .p0-4 { top: -4%; left: 65%; }    
+    .p0-4 { top: -4%; left: 65%; }
     .p0-5 { top: 1%; left: 85%; }
-    
+
     /* row 2 */
     .p1-1 { top: 18%; left: 5%; }
     .p1-2 { top: 7%; left: 25%; }
     .p1-3 { top: 24%; left: 45%; }
-    .p1-4 { top: 16%; left: 65%; }    
+    .p1-4 { top: 16%; left: 65%; }
     .p1-5 { top: 21%; left: 85%; }
-       
+
     /* row 3 */
     .p2-1 { top: 38%; left: 15%; }
     .p2-2 { top: 27%; left: 35%; }
     .p2-3 { top: 44%; left: 55%; }
     .p2-4 { top: 36%; left: 75%; }
     .p2-5 { top: 41%; left: 95%; }
-    
+
     /* row 4 */
     .p3-1 { top: 58%; left: 5%; }
     .p3-2 { top: 47%; left: 25%; }
     .p3-3 { top: 64%; left: 45%; }
-    .p3-4 { top: 56%; left: 65%; }    
+    .p3-4 { top: 56%; left: 65%; }
     .p3-5 { top: 61%; left: 85%; }
-    
+
     /* row 5 */
     .p4-1 { top: 78%; left: 15%; }
     .p4-2 { top: 67%; left: 35%; }
     .p4-3 { top: 84%; left: 55%; }
     .p4-4 { top: 76%; left: 75%; }
     .p4-5 { top: 81%; left: 95%; }
-    
+
     /* row 6 */
     .p5-1 { top: 98%; left: 15%; }
     .p5-2 { top: 87%; left: 35%; }
     .p5-3 { top: 104%; left: 55%; }
     .p5-4 { top: 96%; left: 75%; }
     .p5-5 { top: 101%; left: 95%; }
-        
+
     /* sizes (smallest to largest) */
     .s140 {
       /**
@@ -252,29 +257,29 @@
        */
       margin: -70px 0 0 -70px;
       width: 140px;
-      height: 140px;      
+      height: 140px;
     }
     .s200 {
       margin: -100px 0 0 -100px;
       width: 200px;
-      height: 200px;      
+      height: 200px;
     }
     .s250 {
       margin: -125px 0 0 -125px;
       width: 250px;
-      height: 250px;      
+      height: 250px;
     }
     .s300 {
       margin: -150px 0 0 -150px;
       width: 300px;
-      height: 300px;      
+      height: 300px;
     }
     .s350 {
       margin: -175px 0 0 -175px;
       width: 350px;
-      height: 350px;      
+      height: 350px;
     }
-    
+
     /* colors (pulled from screenshots) */
     .dkblue { border-color: #00006e; }
     .lime { border-color: #c8d354; }
@@ -284,7 +289,7 @@
     .pink { border-color: #9a3368; }
     .yellow { border-color: #efda1d; }
     .green { border-color: #397132; }
-    
+
     /**
      * Keyframes
      * They are kind of wordy, but that allows them to be used
@@ -376,42 +381,42 @@
   <div class="r t17 p0-3 s140 ltgray"></div>
   <div class="r t11 p0-4 s300 red"></div>
   <div class="r t14 p0-5 s250 ltblue"></div>
-  
+
   <!-- row 2 -->
   <div class="r t29 p1-1 s350 pink"></div>
   <div class="r t18 p1-2 s300 yellow"></div>
   <div class="r t30 p1-3 s140 green"></div>
   <div class="r t12 p1-4 s200 ltgray"></div>
   <div class="r t27 p1-5 s250 dkblue"></div>
-  
+
   <!-- row 3 -->
   <div class="r t10 p2-1 s140 pink"></div>
   <div class="r t4 p2-2 s200 red"></div>
   <div class="r t8 p2-3 s300 ltblue"></div>
   <div class="r t22 p2-4 s350 yellow"></div>
   <div class="r t1 p2-5 s250 lime"></div>
-  
+
   <!-- row 4 -->
   <div class="r t3 p3-1 s300 green"></div>
   <div class="r t6 p3-2 s250 dkblue"></div>
   <div class="r t15 p3-3 s350 ltgray"></div>
   <div class="r t24 p3-4 s140 pink"></div>
   <div class="r t21 p3-5 s200 ltblue"></div>
-  
+
   <!-- row 5 -->
   <div class="r t13 p4-1 s250 yellow"></div>
   <div class="r t28 p4-2 s140 red"></div>
   <div class="r t2 p4-3 s200 ltgray"></div>
   <div class="r t19 p4-4 s300 green"></div>
   <div class="r t25 p4-5 s350 lime"></div>
-  
+
   <!-- row 6 -->
   <div class="r t5 p5-1 s350 dkblue"></div>
   <div class="r t26 p5-2 s300 pink"></div>
   <div class="r t20 p5-3 s140 ltblue"></div>
   <div class="r t16 p5-4 s250 yellow"></div>
   <div class="r t9 p5-5 s200 ltgray"></div>
-  
+
   <!-- batch 2 (out of sequence) -->
   <!-- row 1 -->
   <div class="r t22 p0-1 s200 dkblue"></div>
@@ -419,35 +424,35 @@
   <div class="r t2 p0-3 s140 ltgray"></div>
   <div class="r t26 p0-4 s300 red"></div>
   <div class="r t29 p0-5 s250 ltblue"></div>
-  
+
   <!-- row 2 -->
   <div class="r t14 p1-1 s350 pink"></div>
   <div class="r t3 p1-2 s300 yellow"></div>
   <div class="r t15 p1-3 s140 green"></div>
   <div class="r t27 p1-4 s200 ltgray"></div>
   <div class="r t12 p1-5 s250 dkblue"></div>
-  
+
   <!-- row 3 -->
   <div class="r t25 p2-1 s140 pink"></div>
   <div class="r t19 p2-2 s200 red"></div>
   <div class="r t23 p2-3 s300 ltblue"></div>
   <div class="r t7 p2-4 s350 yellow"></div>
   <div class="r t16 p2-5 s250 lime"></div>
-  
+
   <!-- row 4 -->
   <div class="r t18 p3-1 s300 green"></div>
   <div class="r t21 p3-2 s250 dkblue"></div>
   <div class="r t30 p3-3 s350 ltgray"></div>
   <div class="r t9 p3-4 s140 pink"></div>
   <div class="r t6 p3-5 s200 ltblue"></div>
-  
+
   <!-- row 5 -->
   <div class="r t28 p4-1 s250 yellow"></div>
   <div class="r t13 p4-2 s140 red"></div>
   <div class="r t17 p4-3 s200 ltgray"></div>
   <div class="r t4 p4-4 s300 green"></div>
   <div class="r t10 p4-5 s350 lime"></div>
-  
+
   <!-- row 6 -->
   <div class="r t20 p5-1 s350 dkblue"></div>
   <div class="r t11 p5-2 s300 pink"></div>

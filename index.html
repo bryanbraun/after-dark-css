@@ -1,8 +1,10 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>After Dark in CSS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="img/favicon.png" />
   <link rel="stylesheet" href="all/base.css">
   <style>
@@ -10,9 +12,11 @@
     body {
       background-color: #929292;
     }
+
     a {
       color: black;
     }
+
     .content {
       position: relative;
       z-index: 2;
@@ -22,6 +26,7 @@
       background: #fff;
       box-shadow: 1px 1px #111;
     }
+
     .title {
       text-align: center;
       font-size: 12px;
@@ -32,6 +37,7 @@
       background-color: #f0f0f0;
       box-shadow: inset 1px -3px 0px -2px #a8a9b6;
     }
+
     .title:before {
       height: 11px;
       width: 64px;
@@ -40,6 +46,7 @@
       background: url(img/lines.png) repeat;
       margin-right: 8px;
     }
+
     .title:after {
       height: 11px;
       width: 64px;
@@ -48,16 +55,19 @@
       background: url(img/lines.png) repeat;
       margin-left: 8px;
     }
+
     .content .ad {
       text-align: center;
       margin: 1em 0;
     }
+
     .content ul {
       list-style-type: none;
       margin: 2px 0 2em 0;
       padding: 0 0 0 2em;
       font-size: 12px;
     }
+
     .footer {
       width: 400px;
       text-align: center;
@@ -75,8 +85,9 @@
       border-left: 1px solid #38394a;
       box-shadow: 0 0 0px 1px #f0f0f0;
     }
+
     .closebox-innr {
-      display: block;        
+      display: block;
       height: 8px;
       width: 8px;
       background-color: #a2a5ae;
@@ -84,9 +95,11 @@
       border-right: 1px solid #38394a;
       text-indent: -99999em;
     }
+
     .closebox-innr:hover {
       background-color: #ccc;
     }
+
     .maxbox {
       position: absolute;
       top: 3px;
@@ -97,6 +110,7 @@
       border-left: 1px solid #38394a;
       box-shadow: 0 0 0px 1px #f0f0f0;
     }
+
     .maxbox-innr {
       height: 8px;
       width: 8px;
@@ -104,6 +118,7 @@
       border-bottom: 1px solid #38394a;
       border-right: 1px solid #38394a;
     }
+
     .maxbox-innr:before {
       height: 5px;
       width: 5px;
@@ -125,37 +140,67 @@
       font-size: 12px;
       text-align: center;
     }
+
     .toaster {
       width: 64px;
       height: 64px;
       margin: 0 auto 2em;
-      background-image: url("img/toaster-sprite.gif"); 
+      background-image: url("img/toaster-sprite.gif");
       -webkit-animation: flap .2s steps(4) infinite alternate;
-         -moz-animation: flap .2s steps(4) infinite alternate;
-           -o-animation: flap .2s steps(4) infinite alternate;
-              animation: flap .2s steps(4) infinite alternate;
+      -moz-animation: flap .2s steps(4) infinite alternate;
+      -o-animation: flap .2s steps(4) infinite alternate;
+      animation: flap .2s steps(4) infinite alternate;
     }
 
     /* Flapping animation */
     @-webkit-keyframes flap {
-     from { background-position:    0px; }
-       to { background-position: -256px; }
+      from {
+        background-position: 0px;
+      }
+
+      to {
+        background-position: -256px;
+      }
     }
+
     @-moz-keyframes flap {
-       from { background-position:    0px; }
-         to { background-position: -256px; }
+      from {
+        background-position: 0px;
+      }
+
+      to {
+        background-position: -256px;
+      }
     }
+
     @-ms-keyframes flap {
-       from { background-position:    0px; }
-         to { background-position: -256px; }
+      from {
+        background-position: 0px;
+      }
+
+      to {
+        background-position: -256px;
+      }
     }
+
     @-o-keyframes flap {
-       from { background-position:    0px; }
-         to { background-position: -256px; }
+      from {
+        background-position: 0px;
+      }
+
+      to {
+        background-position: -256px;
+      }
     }
+
     @keyframes flap {
-       from { background-position:    0px; }
-         to { background-position: -256px; }
+      from {
+        background-position: 0px;
+      }
+
+      to {
+        background-position: -256px;
+      }
     }
   </style>
   <script>
@@ -173,7 +218,7 @@
         /* Build a list of href's */
         var choices = Array();
         var elements = document.querySelectorAll('.s');
-        Array.prototype.forEach.call(elements, function(el, i){
+        Array.prototype.forEach.call(elements, function (el, i) {
           choices.push(el.getAttribute('href'));
         });
 
@@ -193,11 +238,17 @@
     }
   </script>
 </head>
+
 <body>
-  <a href="https://github.com/bryanbraun/after-dark-css"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://github-camo.global.ssl.fastly.net/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+  <a href="https://github.com/bryanbraun/after-dark-css"><img style="position: absolute; top: 0; right: 0; border: 0;"
+      src="https://github-camo.global.ssl.fastly.net/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67"
+      alt="Fork me on GitHub"
+      data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
   <div id="content" class="content">
     <div class="closebox"><a class="closebox-innr" id="x" href="#">Close</a></div>
-    <div class="maxbox"><div class="maxbox-innr"></div></div>
+    <div class="maxbox">
+      <div class="maxbox-innr"></div>
+    </div>
     <h1 class="title">After Dark in CSS</h1>
     <div class="ad"><img src="img/after-dark-icon.png" /></div>
     <ul>
@@ -217,13 +268,17 @@
     </ul>
   </div>
   <footer class="footer">
-    <a href="https://twitter.com/share" class="twitter-share-button" data-text="Classic &quot;After Dark&quot; screensavers, rebuilt using CSS animations:" data-related="bryanebraun">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-  
+    <a href="https://twitter.com/share" class="twitter-share-button"
+      data-text="Classic &quot;After Dark&quot; screensavers, rebuilt using CSS animations:"
+      data-related="bryanebraun">Tweet</a>
+    <script>!function (d, s, id) {var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) {js = d.createElement(s); js.id = id; js.src = p + '://platform.twitter.com/widgets.js'; fjs.parentNode.insertBefore(js, fjs);} }(document, 'script', 'twitter-wjs');</script>
   </footer>
   <div class="behind">
-    <a href="http://codepen.io/bryanbraun/pen/bojpu" class="clearfix"><div class="toaster"></div></a>
+    <a href="http://codepen.io/bryanbraun/pen/bojpu" class="clearfix">
+      <div class="toaster"></div>
+    </a>
     <p>Made by <a href="http://bryanbraun.com">Bryan</a></p>
   </div>
 </body>
+
 </html>
