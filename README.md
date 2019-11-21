@@ -4,19 +4,15 @@
 
 Do you longingly reminisce about the days when flying toasters graced your screen? Do words like "Confetti Factory" and "Daredevil Dan" make your heart skip a beat?
 
-If so, then never fear --- CSS is here! Using modern CSS techniques like animations and transforms, we can imitate several of your favorite After Dark™ screensavers.
+If so, then never fear—CSS is here! Using modern CSS techniques like animations and transforms, we can imitate several of your favorite After Dark™ screensavers.
 
-The animations were made with CSS alone. No animated gifs or javascript.
+The animations were made with CSS alone. No animated gifs or JavaScript.
 
 ### [See them here!](http://bryanbraun.github.io/after-dark-css/)
 
-#### Browsers
-
-These animations will only work in modern browsers. They have been tested in Chrome, Safari, & Firefox.
-
 #### Why?
 
-Just for fun. 
+Just for fun.
 
 #### Thanks to:
 
