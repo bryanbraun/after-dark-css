@@ -1,0 +1,2 @@
+# Improve default language scanning
+*.html linguist-language=CSS
