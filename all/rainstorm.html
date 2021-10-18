@@ -7,7 +7,7 @@
   <link rel="shortcut icon" href="../img/favicon.png" />
   <link rel="stylesheet" href="base.css">
   <style>
-  
+
     body {
       overflow: hidden;
       /* lightning animation */
@@ -24,30 +24,30 @@
       top: -4800px;
       left: -1244px;
     }
-    
+
     /* Two waves of nearby rain */
     .r1 {
       -webkit-animation: fall 2.2s infinite linear;
       -moz-animation: fall 2.2s infinite linear;
       -o-animation: fall 2.2s infinite linear;
       animation: fall 2.2s infinite linear;
-      background: url(../img/rain-tile-near.png) repeat;     
+      background: url(../img/rain-tile-near.png) repeat;
     }
     .r2 {
       -webkit-animation: fall 2.2s 1s infinite linear;
       -moz-animation: fall 2.2s 1s infinite linear;
       -o-animation: fall 2.2s 1s infinite linear;
       animation: fall 2.2s 1s infinite linear;
-      background: url(../img/rain-tile-near.png) repeat;     
+      background: url(../img/rain-tile-near.png) repeat;
     }
-    
+
     /* Two waves of mid-distant rain */
     .r3 {
       -webkit-animation: fall 4s infinite linear;
       -moz-animation: fall 4s infinite linear;
       -o-animation: fall 4s infinite linear;
       animation: fall 4s infinite linear;
-      background: url(../img/rain-tile-mid.png) repeat;  
+      background: url(../img/rain-tile-mid.png) repeat;
     }
     .r4 {
       -webkit-animation: fall 4.5s 3.2s infinite linear;
@@ -55,15 +55,15 @@
       -o-animation: fall 4.5s 3.2s infinite linear;
       animation: fall 4.5s 3.2s infinite linear;
       background: url(../img/rain-tile-mid.png) repeat;
-    } 
-    
+    }
+
     /* Two waves of distant rain */
     .r5 {
       -webkit-animation: fall 6s infinite linear;
       -moz-animation: fall 6s infinite linear;
       -o-animation: fall 6s infinite linear;
       animation: fall 6s infinite linear;
-      background: url(../img/rain-tile-distant.png) repeat;  
+      background: url(../img/rain-tile-distant.png) repeat;
     }
     .r6 {
       -webkit-animation: fall 6s 4s infinite linear;
@@ -72,11 +72,11 @@
       animation: fall 6s 4s infinite linear;
       background: url(../img/rain-tile-distant.png) repeat;
     }
-    
+
     /**
      * Falling rain animation
      * Assumes a max screen resolution of 2560px x 1600px.
-     * Rain falls the size of the div + the estimated 
+     * Rain falls the size of the div + the estimated
      * height of the screen (1600 max). 4800 + 1600 = 6400.
      *
      * Making the rain fall straight down is easier for ensuring there is always
@@ -84,7 +84,7 @@
      * a translateY of 1244px.
      */
     @-webkit-keyframes fall {
-      from { 
+      from {
         -webkit-transform: translate(0, 0);
         -moz-transform: translate(0, 0);
         -o-transform: translate(0, 0);
@@ -100,7 +100,7 @@
       }
     }
     @-moz-keyframes fall {
-      from { 
+      from {
         -webkit-transform: translate(0, 0);
         -moz-transform: translate(0, 0);
         -o-transform: translate(0, 0);
@@ -116,7 +116,7 @@
       }
     }
     @-o-keyframes fall {
-      from { 
+      from {
         -webkit-transform: translate(0, 0);
         -moz-transform: translate(0, 0);
         -o-transform: translate(0, 0);
@@ -132,7 +132,7 @@
       }
     }
     @keyframes fall {
-      from { 
+      from {
         -webkit-transform: translate(0, 0);
         -moz-transform: translate(0, 0);
         -o-transform: translate(0, 0);
@@ -162,7 +162,7 @@
       98% { background: black; }
       99% { background: white; }
       100% { background: black; }
-    } 
+    }
     @-o-keyframes flash {
       0% { }
       98% { background: black; }
@@ -174,13 +174,13 @@
       98% { background: black; }
       99% { background: white; }
       100% { background: black; }
-    }            
+    }
   </style>
 </head>
   <body>
     <h1 class="visuallyhidden">Rainstorm Screensaver - After Dark in CSS</h1>
     <div class="rain r1"></div>
-    <div class="rain r2"></div>    
+    <div class="rain r2"></div>
     <div class="rain r3"></div>
     <div class="rain r4"></div>
     <div class="rain r5"></div>
