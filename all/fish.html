@@ -7,7 +7,7 @@
   <link rel="shortcut icon" href="../img/favicon.png" />
   <link rel="stylesheet" href="base.css">
   <style>
-  
+
     body {
       background-color: black;
       background-image: url(../img/seafloor.jpg);
@@ -15,7 +15,7 @@
       background-repeat: repeat-x;
       position: relative;
     }
-    
+
     .bubbles {
       position: absolute;
       bottom: -60px;
@@ -29,7 +29,7 @@
       -o-animation: rise 13s linear infinite, reappear 39s steps(3) linear infinite, bubble-alt 0.2s steps(2) infinite;
       animation: rise 13s linear infinite, reappear 39s steps(3) linear infinite, bubble-alt 0.2s steps(2) infinite;
     }
-    
+
     /**
      * Fish
      */
@@ -68,7 +68,7 @@
     .flounder {
       background-image: url(../img/fish-flounder.png);
     }
-    
+
     /**
      * Routes
      * Defines speeds, delays, and direction for a fish to go.
@@ -129,11 +129,11 @@
       -o-animation: rtl 17s linear infinite, toggle 0.2s steps(2) infinite;
       animation: rtl 17s linear infinite, toggle 0.2s steps(2) infinite;
     }
-    
+
     /**
      * Positions
      */
-    .row1 { top: 0%; }     
+    .row1 { top: 0%; }
     .row2 { top: 9% }
     .row3 { top: 18%; }
     .row4 { top: 27%; }
@@ -142,7 +142,7 @@
     .row7 { top: 54%; }
     .row8 { top: 63%; }
     .row9 { top: 72%; }
-        
+
     /**
      * Keyframes
      */
@@ -251,8 +251,8 @@
         left: -30%;
       }
     }
-    
-    /* RTL - Moves fish from right to left, and back again */ 
+
+    /* RTL - Moves fish from right to left, and back again */
     @-webkit-keyframes rtl {
       0% {
         -webkit-transform: rotateY(180deg);
@@ -357,11 +357,11 @@
       }
       100% { left: 110%; }
     }
-    
+
     /* bubble keyframes */
     /* rise */
     @-webkit-keyframes rise {
-      from { 
+      from {
         -webkit-transform: translate(0, 0);
         -moz-transform: translate(0, 0);
         -o-transform: translate(0, 0);
@@ -377,7 +377,7 @@
       }
     }
     @-moz-keyframes rise {
-      from { 
+      from {
         -webkit-transform: translate(0, 0);
         -moz-transform: translate(0, 0);
         -o-transform: translate(0, 0);
@@ -393,7 +393,7 @@
        }
     }
     @-o-keyframes rise {
-      from { 
+      from {
         -webkit-transform: translate(0, 0);
         -moz-transform: translate(0, 0);
         -o-transform: translate(0, 0);
@@ -409,7 +409,7 @@
       }
     }
     @keyframes rise {
-      from { 
+      from {
         -webkit-transform: translate(0, 0);
         -moz-transform: translate(0, 0);
         -o-transform: translate(0, 0);
@@ -441,7 +441,7 @@
       from { left: 20%; }
       to   { left: 80%; }
     }
-    
+
     /* Bubble-alt - alternating the bubble images */
     @-webkit-keyframes bubble-alt {
       from { background-position: 0; }
@@ -476,7 +476,7 @@
       from { background-position: 0; }
       to   { background-position: -290px; }
     }
-    
+
   </style>
 </head>
 <body>
@@ -490,7 +490,7 @@
   <div class="red fish row4 rtl-delay2"></div>
   <div class="jelly fish row4 ltr"></div>
   <div class="minnow fish row5 rtl"></div>
-  <div class="seahorse fish row5 ltr-fast"></div>  
+  <div class="seahorse fish row5 ltr-fast"></div>
   <div class="angel fish row6 rtl-fast"></div>
   <div class="striped fish row7 ltr"></div>
   <div class="guppy fish row7 ltr-delay1"></div>
@@ -499,4 +499,4 @@
   <div class="flounder fish row9 rtl"></div>
   <div class="red fish row9 ltr-delay1"></div>
 </body>
-</html
+</html>
