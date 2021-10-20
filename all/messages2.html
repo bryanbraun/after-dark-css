@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Messages Macintosh Screensaver | After Dark in CSS</title>
-  <meta name="description" content='Experience an After Dark-style Messages screensaver that says "Why Are You Staring at my Macintosh?" in a crawling marquee, rendered entirely in CSS.'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta name="description" content='Experience an After Dark-style Messages screensaver that says "Why Are You Staring at my Macintosh?" in a crawling marquee, rendered entirely in CSS.'> -->
   <link rel="shortcut icon" href="../img/favicon.png" />
   <link rel="stylesheet" href="base.css">
   <style>
@@ -23,6 +24,43 @@
     animation: moveX 8s linear 0s infinite alternate, moveY 17.3s linear 0s infinite alternate ;
   }
 
+/* --------Responsive for less than 600px width screen size--------- */
+  @media screen and (max-width:600px){
+    .message{
+      width: 160px;
+      height: 85px;
+      /* border: 3px solid yellow; */
+    }
+   /* animation keyframes */
+   @-webkit-keyframes moveX {
+    /* screen width - width of message */
+    from { left: 0; } to { left: calc(100% - 160px); }
+  }
+  @-moz-keyframes moveX {
+    from { left: 0; } to { left: calc(100% - 160px); }
+  }
+  @-o-keyframes moveX {
+    from { left: 0; } to { left: calc(100% - 160px); }
+  }
+  @keyframes moveX {
+    from { left: 0; } to { left: calc(100% - 160px); }
+  }
+  @-webkit-keyframes moveY {
+    from { top: 0; } to { top: calc(100% - 85px); }
+  }
+  @-moz-keyframes moveY {
+    from { top: 0; } to { top: calc(100% - 85px); }
+  }
+  @-o-keyframes moveY {
+    from { top: 0; } to { top: calc(100% - 85px); }
+  }
+  @keyframes moveY {
+    from { top: 0; } to { top: calc(100% - 85px); }
+  }
+  }
+
+/* --------Responsive for greater than 600px width screen size--------- */
+  @media screen and (min-width:600px){
   /* animation keyframes */
   @-webkit-keyframes moveX {
     /* screen width - width of message */
@@ -48,6 +86,7 @@
   }
   @keyframes moveY {
     from { top: 0; } to { top: calc(100% - 26px); }
+  }
   }
   </style>
 </head>
