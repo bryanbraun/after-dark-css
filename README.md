@@ -8,13 +8,21 @@ If so, then never fear—CSS is here! Using modern CSS techniques like animation
 
 The animations were made with CSS alone. No animated gifs or JavaScript.
 
-### [See them here!](http://bryanbraun.github.io/after-dark-css/)
+**[See them here!](http://bryanbraun.github.io/after-dark-css/)**
 
-#### Why?
+## Why?
 
 Just for fun.
 
-#### Thanks to:
+## License?
+
+* The HTML & CSS is licensed with [The MIT License](https://opensource.org/licenses/MIT).
+* The [ChicagoFLF font](https://usemodify.com/fonts/chicago/) is licensed with [The SIL Open Font License](https://scripts.sil.org/ofl).
+* Images are copyright [Berkeley Systems](https://en.wikipedia.org/wiki/Berkeley_Systems).
+
+Full reuse is probably ok, but use at your own risk! [For more details, see this comment](https://github.com/bryanbraun/after-dark-css/issues/3#issuecomment-127814083).
+
+## Thanks to:
 
 [Jonathon Sampson](https://twitter.com/jonathansampson), [Keith Clark](http://codepen.io/keithclark/), [Rob Glazebrook](http://www.cssnewbie.com/pure-css-bouncing-ball), [Ryan Justice](http://ned.highline.edu/~ryan-j/200/final/) and others for posting tutorials & demos on CSS animations.
 [N. Landsteiner](http://www.masswerk.at/flyer/), [David Donarumo](http://www.youtube.com/watch?v=M1w1SQ3ezh8), and [Lazy Game Reviews](http://www.youtube.com/watch?v=ANnYbX54oU4) for online preservation of what the original screensavers looked like.
